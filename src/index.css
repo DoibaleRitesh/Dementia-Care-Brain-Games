@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --color-canvas: #F6F7F4;
+  --color-surface: #FFFFFF;
+  --color-sage-mist: #EAF0EA;
+  --color-sage-soft: #DCE6DD;
+  --color-sage-border: #D1DCD2;
+  --color-sage-strong: #B8C9BA;
+  --color-sage-primary: #2F5D46;
+  --color-sage-hover: #234735;
+  --color-ink: #1B241E;
+  --color-ink-muted: #46544B;
+  --color-ochre-bg: #FBF4E6;
+  --color-ochre-border: #DFC38D;
+  --color-ochre-text: #7A4B14;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html.text-scale-standard {
+    font-size: 16px;
+  }
+
+  html.text-scale-large {
+    font-size: 18.5px;
+  }
+
+  html.text-scale-xlarge {
+    font-size: 21px;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+    color: var(--color-ink);
+  }
+
+  button,
+  a,
+  input,
+  select {
+    outline-color: var(--color-sage-primary);
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible {
+    outline: 3px solid var(--color-sage-primary);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

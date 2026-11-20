@@ -1,0 +1,8 @@
+{
+  "name": "MindHarbor — Dementia Care & Brain Games",
+  "description": "A calm, high-contrast educational resource, peer-reviewed scientific research library, and collection of eight untimed, multi-level memory and cognitive games designed for dementia patients and caregivers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
